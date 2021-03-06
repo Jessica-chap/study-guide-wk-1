@@ -16,9 +16,14 @@ def print_list(items):
         3
         9
     """
+    for num in items:
+        print(num)
 
-    print("the wrong thing")
 
+print_test_list = [1, 2, 3, 4, 5]
+print_list(print_test_list)
+
+#DONE-----------------------------------------
 
 def long_words(words):
     """Return words in input list that longer than 4 characters.
@@ -36,8 +41,17 @@ def long_words(words):
         >>> long_words(["all", "are", "tiny"])
         []
     """
+    more_than_four = []
+    for word in words:
+        if len(word) > 4:
+            more_than_four.append(word)
 
-    return ['the wrong thing']
+    return more_than_four
+
+
+long_test_words = ["hello", "a", "b", "hi", "bacon", "bacon"]
+long_words(long_test_words)
+#Done-----------------------------------------
 
 
 def n_long_words(words, n):
@@ -53,9 +67,16 @@ def n_long_words(words, n):
         >>> n_long_words(["I", "like", "apples", "bananas", "you"], 5)
         ['apples', 'bananas']
     """
+    n_words = []
+    for word in words:
+        if len(word) > n:
+            n_words.append(word)
 
-    return ['the wrong thing']
+    return n_words
 
+n_test_long_words = ["I", "like", "apples", "bananas", "you"]
+n_long_words(n_test_long_words, 5)
+#DONE-------------------------------------------------------
 
 def smallest_int(numbers):
     """Find the smallest integer in a list of integers and return it.
@@ -73,9 +94,17 @@ def smallest_int(numbers):
         >>> smallest_int([]) is None
         True
     """
+    smallest_num = []
+    test_num = numbers[0]
+    
+    for number in numbers:
+        if number < test_num:
+            smallest_num.append(number)
+    
+    return smallest_num
 
-    return 100
-
+smallest_test_int = [-5, 2, -5, 7]
+smallest_int(smallest_test_int)
 
 def largest_int(numbers):
     """Find the largest integer in a list of integers and return it.
@@ -111,8 +140,16 @@ def halvesies(numbers):
         >>> halvesies([1, 5])
         [0.5, 2.5]
     """
+    halved_list = []
 
-    return []
+    for number in numbers:
+        halved_num = float(number / 2)
+        halved_list.append(halved_num)
+
+    return halved_list
+
+halvesies_test_list = [2, 6, -2]
+halvesies(halvesies_test_list)
 
 
 def word_lengths(words):
